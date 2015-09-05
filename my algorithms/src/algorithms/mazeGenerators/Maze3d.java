@@ -48,6 +48,26 @@ public class Maze3d {
 		this.exit = null;
 	}
 	
+	
+	@Override
+	public String toString() {
+		String maze  = "";
+		
+		for(int i = 0 ;i < xAxis ; i++ ){					
+			for(int j = 0 ; j < yAxis ; j++){			//setting the whole maze to 0
+				for(int h = 0 ; h < zAxis ; h++){
+					maze += arr[i][j][h];
+				}
+				maze+="\n";
+			}
+			maze+="\n";
+			maze+="\n";
+		}
+		maze+="\n";maze+="\n";
+		
+		return maze;
+	}
+	
 	/**
 	 * fullWall is used to fill the maze with "cells" , creating a grid.
 	 */
